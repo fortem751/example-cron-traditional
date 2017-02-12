@@ -1,4 +1,4 @@
-
+ 
 FROM docker.io/openshift/base-centos7
 
 USER root
@@ -6,7 +6,7 @@ USER root
 RUN yum update -y && \
     yum install -y python && \
     yum install -y python-devel && \
-    yum install python-setuptools python-setuptools-devel && \
+    yum install -y python-setuptools python-setuptools-devel && \
     easy_install pip && \
     yum install mercurial && \
     yum clean all
