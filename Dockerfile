@@ -6,7 +6,8 @@ USER root
 RUN yum update -y && \
     yum install -y python && \
     yum install -y python-devel && \
-    yum install -y python34-pip.noarch \
+    yum install python-setuptools python-setuptools-devel && \
+    easy_install pip && \
     yum install mercurial && \
     yum clean all
 
