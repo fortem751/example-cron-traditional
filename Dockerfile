@@ -5,7 +5,7 @@ USER root
 
 RUN yum -y install python \
     python-devel \
-    pip \
+    python34-pip \
     mercurial && yum clean all
 
 # Install dev cron
