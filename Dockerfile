@@ -5,9 +5,7 @@ USER root
 
 RUN yum -y install python \
     python-devel \
-    curl -O https://bootstrap.pypa.io/get-pip.py \
-    python get-pip.py \
-    python-pip \
+    pip \
     mercurial && yum clean all
 
 # Install dev cron
