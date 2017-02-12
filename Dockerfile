@@ -3,9 +3,11 @@ FROM openshift/base-centos7
 
 USER root
 
-RUN yum -y install python \
+RUN yum update -y \
+    yum -y install python \
     python-devel \
-    python34-pip \
+    python34-pip.noarch \
+    python2-pip.noarch \
     mercurial && yum clean all
 
 # Install dev cron
