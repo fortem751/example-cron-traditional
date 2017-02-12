@@ -5,7 +5,7 @@ USER root
 
 RUN yum -y install python \
     python-devel \
-    curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" \
+    curl -O https://bootstrap.pypa.io/get-pip.py \
     python get-pip.py \
     python-pip \
     mercurial && yum clean all
