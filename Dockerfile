@@ -1,14 +1,14 @@
 
-FROM openshift/base-centos7
+FROM docker.io/openshift/base-centos7
 
 USER root
 
-RUN yum update -y \
-    yum -y install python \
-    python-devel \
-    python34-pip.noarch \
-    python2-pip.noarch \
-    mercurial && yum clean all
+RUN yum update -y && \
+    yum install -y python && \
+    yum install -y python-devel && \
+    yum install -y python34-pip.noarch \
+    yum install mercurial && \
+    yum clean all
 
 # Install dev cron
 RUN pip install -e hg+https://bitbucket.org/dbenamy/devcron#egg=devcron
