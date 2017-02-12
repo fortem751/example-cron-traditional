@@ -5,8 +5,8 @@ USER root
 
 RUN yum -y install python \
     python-devel \
-    epel-release \
-    rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm \
+    curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" \
+    python get-pip.py \
     python-pip \
     mercurial && yum clean all
 
